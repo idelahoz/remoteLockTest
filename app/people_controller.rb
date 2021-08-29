@@ -1,4 +1,5 @@
-import ''
+require './app/lib/people_dollar_parser'
+require './app/lib/people_percent_parser'
 
 class PeopleController
   def initialize(params)
