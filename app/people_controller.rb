@@ -9,13 +9,13 @@ class PeopleController
   end
 
   def normalize
-    sort_people(dollar_parser.parse + percent_parser.parse).map(&:to_s)
+    sort_people(dollar_parser.people + percent_parser.people).map(&:to_s)
   end
 
   private
 
   def sort_people(people)
-    objects.sort_by(&:first_name)
+    people.sort_by(&:first_name)
   end
 
   attr_reader :params, :dollar_parser, :percent_parser
